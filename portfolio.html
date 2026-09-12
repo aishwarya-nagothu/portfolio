@@ -1,0 +1,2413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Aishwarya Nagothu | AI • Software • Problem Solving</title>
+
+<meta name="description"
+content="Portfolio of Aishwarya Nagothu — Computer Science student exploring AI/ML, software development, problem solving and research.">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --bg:#090e1b;
+    --bg2:#0d1425;
+    --card:#121b2f;
+    --card2:#17233b;
+
+    --text:#edf2ff;
+    --muted:#a8b4cf;
+
+    --accent:#8ef0c2;
+    --purple:#b69cff;
+
+    --line:#26334f;
+    --line-light:#354463;
+
+    --shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+
+    background:
+        radial-gradient(
+            circle at 85% 5%,
+            rgba(95,83,180,.28),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 5% 70%,
+            rgba(55,180,135,.10),
+            transparent 25%
+        ),
+        var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    line-height:1.65;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+::selection{
+    background:var(--accent);
+    color:#07131a;
+}
+
+.wrap{
+    max-width:1160px;
+    margin:auto;
+    padding:0 28px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:21px 0;
+
+    position:sticky;
+    top:0;
+
+    background:rgba(9,14,27,.88);
+    backdrop-filter:blur(16px);
+
+    z-index:100;
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.links{
+    display:flex;
+    gap:21px;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.links a{
+    transition:.2s;
+}
+
+.links a:hover{
+    color:var(--accent);
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+section{
+    padding:100px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.eyebrow{
+    color:var(--accent);
+
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    font-weight:800;
+}
+
+h1{
+    font-size:clamp(48px,7vw,88px);
+
+    line-height:1.02;
+
+    letter-spacing:-4px;
+
+    margin:20px 0 25px;
+}
+
+h1 span,
+h2 span{
+    color:var(--accent);
+}
+
+h2{
+    font-size:clamp(36px,5vw,60px);
+
+    line-height:1.08;
+
+    letter-spacing:-2.5px;
+
+    margin:15px 0 28px;
+}
+
+h3{
+    font-size:22px;
+    margin:10px 0;
+}
+
+.lead,
+.sectiontext{
+    max-width:720px;
+
+    color:var(--muted);
+
+    font-size:18px;
+}
+
+.muted{
+    color:var(--muted);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.actions{
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:32px;
+
+    flex-wrap:wrap;
+}
+
+.button{
+    display:inline-block;
+
+    background:var(--accent);
+    color:#07151a;
+
+    padding:12px 21px;
+
+    border-radius:999px;
+
+    font-weight:800;
+
+    transition:.2s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(142,240,194,.15);
+}
+
+.outline-button{
+    display:inline-block;
+
+    border:1px solid var(--accent);
+
+    color:var(--accent);
+
+    padding:11px 21px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.2s;
+}
+
+.outline-button:hover{
+    background:rgba(142,240,194,.08);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:90vh;
+
+    display:grid;
+
+    grid-template-columns:1.35fr .75fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.hero-title-note{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:7px 12px;
+
+    border:1px solid var(--line-light);
+
+    border-radius:999px;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.hero-title-note i{
+    width:7px;
+    height:7px;
+
+    background:var(--accent);
+
+    border-radius:50%;
+
+    display:block;
+
+    box-shadow:0 0 12px var(--accent);
+}
+
+.hero-card{
+    border:1px solid #3a4969;
+
+    border-radius:28px;
+
+    padding:34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(31,48,80,.9),
+            rgba(13,21,38,.95)
+        );
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.hero-card:before{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(182,156,255,.13);
+
+    right:-70px;
+    top:-70px;
+}
+
+.initials{
+    font-size:120px;
+
+    font-weight:900;
+
+    letter-spacing:-11px;
+
+    color:var(--accent);
+
+    line-height:1;
+}
+
+.hero-card p{
+    font-size:21px;
+
+    color:var(--muted);
+
+    position:relative;
+}
+
+.hero-stat{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    border-top:1px solid var(--line);
+
+    margin-top:28px;
+
+    padding-top:22px;
+}
+
+.hero-stat strong{
+    display:block;
+
+    font-size:22px;
+
+    color:var(--text);
+}
+
+.hero-stat span{
+    font-size:11px;
+
+    color:var(--muted);
+
+    letter-spacing:.7px;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+}
+
+.about-card{
+    background:
+        linear-gradient(
+            145deg,
+            var(--card2),
+            var(--bg2)
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    padding:30px;
+}
+
+.about-card p{
+    color:var(--muted);
+}
+
+.about-highlights{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.highlight{
+    padding:15px;
+
+    border:1px solid var(--line);
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.015);
+}
+
+.highlight strong{
+    display:block;
+
+    color:var(--accent);
+
+    font-size:18px;
+}
+
+.highlight span{
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skill-group{
+    margin:30px 0;
+}
+
+.skill-group h3{
+    font-size:17px;
+
+    color:#dce5fb;
+}
+
+.skills{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.skills span{
+    border:1px solid var(--line);
+
+    background:var(--card);
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    color:#d8e2fa;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+.skills span:hover{
+    border-color:var(--accent);
+
+    color:var(--accent);
+
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.project-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.project{
+    background:
+        linear-gradient(
+            155deg,
+            #17233b,
+            #10182b
+        );
+
+    border:1px solid var(--line);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.25s;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.project:hover{
+    transform:translateY(-6px);
+
+    border-color:#4d638c;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.2);
+}
+
+.project.featured{
+    border-color:#354c67;
+}
+
+.project-number{
+    color:var(--accent);
+
+    font-family:monospace;
+
+    font-size:13px;
+}
+
+.project h3{
+    font-size:25px;
+}
+
+.project-tech{
+    color:var(--accent);
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
+
+.project p{
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+.project-footer{
+    margin-top:auto;
+
+    padding-top:15px;
+}
+
+.project-link{
+    color:var(--accent);
+
+    font-weight:800;
+
+    font-size:14px;
+}
+
+.project-badge{
+    display:inline-block;
+
+    margin-left:8px;
+
+    color:var(--purple);
+
+    border:1px solid #493e6c;
+
+    padding:3px 7px;
+
+    border-radius:999px;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   PROBLEM SOLVING
+========================================================= */
+
+.problem-grid{
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:55px;
+
+    align-items:start;
+}
+
+.problem-copy p{
+    color:var(--muted);
+
+    max-width:65ch;
+
+    line-height:1.85;
+}
+
+.profile-list{
+    display:grid;
+
+    gap:14px;
+}
+
+.profile-card{
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+    padding:20px;
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    transition:.25s;
+
+    background:rgba(255,255,255,.012);
+}
+
+.profile-card:hover{
+    transform:translateY(-4px);
+
+    border-color:var(--accent);
+
+    background:rgba(142,240,194,.025);
+}
+
+.profile-number{
+    color:var(--accent);
+
+    font-family:monospace;
+
+    font-size:12px;
+}
+
+.profile-card h3{
+    margin:0 0 4px;
+}
+
+.profile-card p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   EXPERIENCE / TIMELINE
+========================================================= */
+
+.timeline{
+    max-width:900px;
+}
+
+.timeline-item{
+    position:relative;
+
+    padding:0 0 45px 36px;
+
+    border-left:1px solid var(--line);
+}
+
+.timeline-item:last-child{
+    border-left:0;
+}
+
+.timeline-dot{
+    position:absolute;
+
+    left:-6px;
+
+    top:5px;
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    box-shadow:0 0 16px rgba(142,240,194,.4);
+}
+
+.timeline-date{
+    color:var(--accent);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.timeline-role{
+    color:var(--purple);
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.timeline-item p{
+    color:var(--muted);
+
+    max-width:850px;
+}
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievement-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.achievement{
+    padding:30px;
+
+    border-radius:22px;
+
+    border:1px solid var(--line);
+
+    background:
+        linear-gradient(
+            145deg,
+            #17233b,
+            #10182b
+        );
+
+    transition:.25s;
+}
+
+.achievement:hover{
+    transform:translateY(-4px);
+
+    border-color:#4b5d82;
+}
+
+.achievement-number{
+    color:var(--accent);
+
+    font-family:monospace;
+}
+
+.achievement p{
+    color:var(--muted);
+}
+
+.recognition{
+    color:var(--purple);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+
+.research-card{
+    padding:40px;
+
+    border:1px solid #3b4c6d;
+
+    border-radius:26px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(182,156,255,.13),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #192641,
+            #10182b
+        );
+
+    box-shadow:var(--shadow);
+}
+
+.research-title{
+    font-size:30px;
+
+    max-width:800px;
+}
+
+.research-tags{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin:22px 0 30px;
+}
+
+.research-tags span{
+    border:1px solid #3b4968;
+
+    padding:7px 12px;
+
+    border-radius:999px;
+
+    color:#d8e2fa;
+
+    font-size:12px;
+}
+
+.research-flow{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+    margin-top:35px;
+}
+
+.flow-step{
+    border:1px solid var(--line);
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:#0c1425;
+}
+
+.flow-step strong{
+    display:block;
+
+    color:var(--accent);
+
+    margin-bottom:7px;
+
+    font-size:13px;
+}
+
+.flow-step p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+.conference{
+    margin-top:30px;
+
+    padding:18px;
+
+    border-left:3px solid var(--accent);
+
+    background:rgba(142,240,194,.035);
+}
+
+.conference strong{
+    display:block;
+
+    color:var(--text);
+}
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education-grid{
+    display:grid;
+
+    gap:16px;
+
+    max-width:950px;
+}
+
+.education-card{
+    display:grid;
+
+    grid-template-columns:170px 1fr;
+
+    gap:25px;
+
+    padding:25px;
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    background:var(--card);
+
+    transition:.2s;
+}
+
+.education-card:hover{
+    border-color:#415476;
+}
+
+.education-year{
+    color:var(--accent);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.education-card h3{
+    margin:0;
+}
+
+.education-card p{
+    color:var(--muted);
+
+    margin:5px 0 0;
+}
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-box{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:38px;
+
+    border:1px solid var(--line-light);
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17233b,
+            #10182b
+        );
+}
+
+.resume-meta{
+    display:flex;
+
+    gap:9px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+}
+
+.resume-meta span{
+    font-size:12px;
+
+    color:var(--muted);
+
+    border:1px solid var(--line);
+
+    border-radius:999px;
+
+    padding:5px 9px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:55px;
+
+    align-items:start;
+}
+
+.social-links{
+    display:grid;
+
+    gap:11px;
+}
+
+.social-link{
+    padding:17px 20px;
+
+    border:1px solid var(--line);
+
+    border-radius:15px;
+
+    color:var(--muted);
+
+    transition:.2s;
+
+    display:flex;
+
+    justify-content:space-between;
+}
+
+.social-link:hover{
+    border-color:var(--accent);
+
+    color:var(--accent);
+
+    transform:translateX(5px);
+}
+
+.email{
+    color:var(--accent);
+
+    font-size:17px;
+
+    font-weight:700;
+
+    display:block;
+
+    margin:20px 0 25px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:28px 0;
+
+    color:var(--muted);
+
+    font-size:13px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+    .links{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+
+        min-height:auto;
+
+        padding-top:65px;
+    }
+
+    .hero-card{
+        max-width:450px;
+    }
+
+    .about-grid,
+    .problem-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .achievement-grid{
+        grid-template-columns:1fr;
+    }
+
+    .research-flow{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .wrap{
+        padding:0 20px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    h1{
+        letter-spacing:-2.5px;
+    }
+
+    .initials{
+        font-size:90px;
+    }
+
+    .about-highlights{
+        grid-template-columns:1fr;
+    }
+
+    .education-card{
+        grid-template-columns:1fr;
+
+        gap:8px;
+    }
+
+    .research-flow{
+        grid-template-columns:1fr;
+    }
+
+    .resume-box{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    footer{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="wrap">
+
+
+<!-- ======================================================
+     NAVIGATION
+======================================================= -->
+
+<nav>
+
+<a class="logo" href="#home">
+AN<span>.</span>
+</a>
+
+<div class="links">
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#problem-solving">Problem Solving</a>
+<a href="#experience">Experience</a>
+<a href="#achievements">Achievements</a>
+<a href="#research">Research</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section id="home" class="hero">
+
+<div>
+
+<div class="hero-title-note">
+<i></i>
+Open to opportunities & collaborations
+</div>
+
+<div class="eyebrow" style="margin-top:25px;">
+B.Tech CSE · Class of 2028
+</div>
+
+<h1>
+
+
+<br>
+
+<span>Where curiosity meets technology.</span>
+
+</h1>
+
+<p class="lead">
+
+I'm Aishwarya Nagothu, a third-year Computer Science student
+at BVRIT Hyderabad exploring Artificial Intelligence,
+Machine Learning, software development, problem solving,
+and research-driven technology.
+
+</p>
+
+<div class="actions">
+
+<a class="button" href="#projects">
+Explore my work ↗
+</a>
+
+<a class="outline-button"
+href="Resume.pdf"
+target="_blank">
+View Resume
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="initials">
+AN
+</div>
+
+<p>
+Curious mind.<br>
+Continuous learner.
+</p>
+
+<div class="hero-stat">
+
+<div>
+<strong>9.13</strong>
+<span>CGPA</span>
+</div>
+
+<div>
+<strong>AI/ML</strong>
+<span>INTEREST</span>
+</div>
+
+<div>
+<strong>2028</strong>
+<span>GRADUATION</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT
+======================================================= -->
+
+<section id="about">
+
+<div class="eyebrow">
+01 — About Me
+</div>
+
+<h2>
+Learning by <span>building.</span>
+</h2>
+
+<div class="about-grid">
+
+<div>
+
+<p class="sectiontext">
+
+I'm a Computer Science and Engineering student at
+BVRIT Hyderabad College of Engineering for Women.
+I enjoy understanding how technology works and then
+turning that understanding into practical solutions.
+
+</p>
+
+<p class="sectiontext">
+
+My current interests sit at the intersection of
+AI/ML, software development, Data Structures and
+Algorithms, and research.
+
+</p>
+
+<p class="sectiontext">
+
+I learn best by building, experimenting, solving,
+reviewing mistakes, and continuously improving the
+way I approach a problem.
+
+</p>
+
+</div>
+
+
+<div class="about-card">
+
+<h3>
+What I'm exploring
+</h3>
+
+<p>
+
+Artificial Intelligence and Machine Learning,
+AI-powered applications, software development,
+algorithmic problem solving, and technology-driven
+solutions to real-world problems.
+
+</p>
+
+
+<div class="about-highlights">
+
+<div class="highlight">
+<strong>AI / ML</strong>
+<span>Building & experimenting</span>
+</div>
+
+<div class="highlight">
+<strong>DSA</strong>
+<span>Consistent problem solving</span>
+</div>
+
+<div class="highlight">
+<strong>Research</strong>
+<span>Sustainability & technology</span>
+</div>
+
+<div class="highlight">
+<strong>Community</strong>
+<span>Learning & collaboration</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SKILLS
+======================================================= -->
+
+<section id="skills">
+
+<div class="eyebrow">
+02 — Skills
+</div>
+
+<h2>
+Tools I <span>work with.</span>
+</h2>
+
+<p class="sectiontext">
+
+A growing technical toolkit developed through
+coursework, projects, problem-solving practice,
+and experimentation.
+
+</p>
+
+
+<div class="skill-group">
+
+<h3>Programming & Web</h3>
+
+<div class="skills">
+
+<span>Python</span>
+<span>Java</span>
+<span>C</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>AI / ML</h3>
+
+<div class="skills">
+
+<span>Scikit-learn</span>
+<span>LLMs</span>
+<span>RAG</span>
+<span>Pandas</span>
+<span>NumPy</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Development & Tools</h3>
+
+<div class="skills">
+
+<span>FastAPI</span>
+<span>Streamlit</span>
+<span>Selenium</span>
+<span>Git</span>
+<span>GitHub</span>
+<span>VS Code</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Computer Science</h3>
+
+<div class="skills">
+
+<span>Data Structures & Algorithms</span>
+<span>Object-Oriented Programming</span>
+<span>DBMS</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Professional Skills</h3>
+
+<div class="skills">
+
+<span>Adaptability</span>
+<span>Communication</span>
+<span>Critical Thinking</span>
+<span>Team Collaboration</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PROJECTS
+======================================================= -->
+
+<section id="projects">
+
+<div class="eyebrow">
+03 — Selected Work
+</div>
+
+<h2>
+Things I've <span>built.</span>
+</h2>
+
+<p class="sectiontext">
+
+A selection of projects spanning AI applications,
+machine learning, software development, and
+interactive tools.
+
+</p>
+
+
+<div class="project-grid">
+
+
+<!-- PROJECT 1 -->
+
+<article class="project featured">
+
+<div class="project-number">
+01 · FEATURED
+</div>
+
+<h3>
+AP Invoice Agent
+</h3>
+
+<div class="project-tech">
+Python · FastAPI · Streamlit · OCR · LLM
+</div>
+
+<p>
+
+AI-powered accounts payable assistant that extracts
+invoice information from PDFs, validates required
+fields, detects discrepancies, and supports invoice
+verification.
+
+</p>
+
+<p>
+
+Integrates OCR, document parsing, FastAPI backend
+services, and LLM-based reasoning.
+
+</p>
+
+<div class="project-footer">
+
+<a class="project-link"
+href="https://github.com/aishwarya-nagothu/AP-Invoice-Agent"
+target="_blank">
+
+View repository ↗
+
+</a>
+
+<span class="project-badge">
+AI
+</span>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 2 -->
+
+<article class="project featured">
+
+<div class="project-number">
+02 · FEATURED
+</div>
+
+<h3>
+TechNews Digest
+</h3>
+
+<div class="project-tech">
+Python · Streamlit · Hugging Face
+</div>
+
+<p>
+
+AI-powered technology news platform that aggregates,
+filters, extracts, and summarizes technology articles
+to help users quickly identify important information.
+
+</p>
+
+<p>
+
+Includes an interactive Streamlit interface for
+browsing and organizing technology news.
+
+</p>
+
+<div class="project-footer">
+
+<a class="project-link"
+href="https://github.com/aishwarya-nagothu/AI-Tech-News-Summarization"
+target="_blank">
+
+View repository ↗
+
+</a>
+
+<span class="project-badge">
+NLP
+</span>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 3 -->
+
+<article class="project featured">
+
+<div class="project-number">
+03 · FEATURED
+</div>
+
+<h3>
+Used Vehicle Price Prediction
+</h3>
+
+<div class="project-tech">
+Python · Selenium · Scikit-learn · Pandas
+</div>
+
+<p>
+
+End-to-end ML pipeline using scraped used-SUV
+data, preprocessing, feature engineering, and
+regression models to estimate fair market prices.
+
+</p>
+
+<p>
+
+Includes comparison between predicted and listed
+vehicle prices.
+
+</p>
+
+<div class="project-footer">
+
+<a class="project-link"
+href="https://github.com/aishwarya-nagothu/car-resale-value-predictor"
+target="_blank">
+
+View repository ↗
+
+</a>
+
+<span class="project-badge">
+ML
+</span>
+
+</div>
+
+</article>
+
+
+<!-- PROJECT 6 -->
+
+<article class="project">
+
+<div class="project-number">
+06 · FEATURED
+</div>
+
+<h3>
+NeuroQuest
+</h3>
+
+<div class="project-tech">
+Python · GUI · Game Development
+</div>
+
+<p>
+
+A Python-based interactive memory game designed
+around visual recall and cognitive challenge.
+
+</p>
+
+<div class="project-footer">
+
+<a class="project-link"
+href="https://github.com/aishwarya-nagothu/NeuroQuest"
+target="_blank">
+
+View repository ↗
+
+</a>
+
+<span class="project-badge">
+Python
+</span>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PROBLEM SOLVING
+======================================================= -->
+
+<section id="problem-solving">
+
+<div class="eyebrow">
+04 — Problem Solving
+</div>
+
+<h2>
+Thinking in patterns,<br>
+<span>solving step by step.</span>
+</h2>
+
+<div class="problem-grid">
+
+
+<div class="problem-copy">
+
+<p>
+
+I regularly practice Data Structures and Algorithms
+to strengthen logical thinking, coding accuracy,
+and my ability to break complex problems into
+smaller, manageable steps.
+
+</p>
+
+<p>
+
+My current practice includes arrays, strings,
+linked lists, stacks, queues, recursion, searching,
+sorting, trees, graphs, hashing, and dynamic
+programming.
+
+</p>
+
+<p>
+
+I primarily use Java for recent problem-solving
+practice while focusing on understanding the reasoning
+behind each approach, analysing complexity, and
+learning from mistakes.
+
+</p>
+
+</div>
+
+
+<div class="profile-list">
+
+
+<a class="profile-card"
+href="https://leetcode.com/u/aishwarya_598/"
+target="_blank">
+
+<span class="profile-number">
+01
+</span>
+
+<div>
+
+<h3>
+LeetCode ↗
+</h3>
+
+<p>
+Algorithms, data structures and interview-style
+problem solving.
+</p>
+
+</div>
+
+</a>
+
+
+<a class="profile-card"
+href="https://www.codechef.com/users/aishwarya_598"
+target="_blank">
+
+<span class="profile-number">
+02
+</span>
+
+<div>
+
+<h3>
+CodeChef ↗
+</h3>
+
+<p>
+Competitive programming, logical reasoning and
+coding practice.
+</p>
+
+</div>
+
+</a>
+
+
+<a class="profile-card"
+href="https://github.com/aishwarya-nagothu"
+target="_blank">
+
+<span class="profile-number">
+03
+</span>
+
+<div>
+
+<h3>
+GitHub ↗
+</h3>
+
+<p>
+Projects, experiments and code that document my
+learning journey.
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     VOLUNTEERING
+======================================================= -->
+
+<section id="experience">
+
+<div class="eyebrow">
+05 — Volunteering Experience
+</div>
+
+<h2>
+Learning through <span>community.</span>
+</h2>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-date">
+2026
+</div>
+
+<h3>
+SWE Industry Academia Conclave 2026
+</h3>
+
+<div class="timeline-role">
+Volunteer · BVRIT Hyderabad
+</div>
+
+<p>
+
+Volunteered at the Industry Academia Conclave
+organized by BVRIT Hyderabad College of Engineering
+for Women on behalf of the Society of Women Engineers
+(SWE).
+
+</p>
+
+<p>
+
+Supported the coordination of technical talks,
+panel discussions, speed mentoring, and Prompt Battle,
+an AI-focused technical game.
+
+</p>
+
+<p>
+
+Also assisted in facilitating interactions between
+SWE members and students, contributing to a collaborative
+environment for technical learning, networking, and
+knowledge exchange.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     ACHIEVEMENTS
+======================================================= -->
+
+<section id="achievements">
+
+<div class="eyebrow">
+06 — Achievements & Recognitions
+</div>
+
+<h2>
+Milestones that <span>matter.</span>
+</h2>
+
+
+<div class="achievement-grid">
+
+
+<div class="achievement">
+
+<div class="achievement-number">
+01
+</div>
+
+<div class="recognition">
+GOOGLE · 2026
+</div>
+
+<h3>
+Gemini Student Ambassador
+</h3>
+
+<p>
+
+Selected as a Gemini Student Ambassador to represent
+Google on campus, promote Gemini adoption, and engage
+students through AI-focused learning experiences.
+
+</p>
+
+<p>
+
+The role combines technology, communication,
+community engagement, and hands-on learning.
+
+</p>
+
+</div>
+
+
+<div class="achievement">
+
+<div class="achievement-number">
+02
+</div>
+
+<div class="recognition">
+ICSMET · 2025
+</div>
+
+<h3>
+Conference Presentation
+</h3>
+
+<p>
+
+Presented an AI-driven framework titled
+<strong>
+“AI Powered Smart Recycling of Lithium-Ion Batteries”
+</strong>
+at the International Conference ICSMET 2025.
+
+</p>
+
+<p>
+
+The work explored sustainable battery waste management
+using X-ray sorting, Machine Learning, and Direct
+Cathode Recycling.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     RESEARCH
+======================================================= -->
+
+<section id="research">
+
+<div class="eyebrow">
+07 — Research & R&D
+</div>
+
+<h2>
+Exploring technology beyond <span>the classroom.</span>
+</h2>
+
+
+<div class="research-card">
+
+<div class="eyebrow">
+AI · Sustainability · Battery Recycling
+</div>
+
+<div class="research-title">
+AI-Powered Smart Recycling of Lithium-Ion Batteries
+</div>
+
+<p class="sectiontext">
+
+My research work explores an AI-driven approach to
+improving lithium-ion battery recycling, particularly
+for the growing challenge of electric-vehicle battery
+waste.
+
+</p>
+
+<p class="sectiontext">
+
+The proposed framework combines X-ray-based battery
+identification with Machine Learning to classify
+battery chemistry before downstream processing,
+helping guide batteries toward appropriate recycling
+pathways.
+
+</p>
+
+
+<div class="research-tags">
+
+<span>X-ray Sorting</span>
+<span>Machine Learning</span>
+<span>Lithium-Ion Batteries</span>
+<span>Battery Recycling</span>
+<span>Direct Cathode Recycling</span>
+<span>Sustainability</span>
+
+</div>
+
+
+<div class="research-flow">
+
+
+<div class="flow-step">
+
+<strong>
+01 · IDENTIFICATION
+</strong>
+
+<p>
+Battery inspection and X-ray based analysis.
+</p>
+
+</div>
+
+
+<div class="flow-step">
+
+<strong>
+02 · CLASSIFICATION
+</strong>
+
+<p>
+Machine Learning based identification of
+battery chemistry.
+</p>
+
+</div>
+
+
+<div class="flow-step">
+
+<strong>
+03 · PROCESSING
+</strong>
+
+<p>
+Mechanical processing and separation of
+recoverable materials.
+</p>
+
+</div>
+
+
+<div class="flow-step">
+
+<strong>
+04 · RECOVERY
+</strong>
+
+<p>
+Direct cathode recycling for suitable
+battery materials.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="conference">
+
+<strong>
+ICSMET 2025 · Conference Presentation
+</strong>
+
+<span class="muted">
+Presented the framework:
+“AI Powered Smart Recycling of Lithium-Ion Batteries”
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     EDUCATION
+======================================================= -->
+
+<section id="education">
+
+<div class="eyebrow">
+08 — Education
+</div>
+
+<h2>
+Academic <span>journey.</span>
+</h2>
+
+
+<div class="education-grid">
+
+
+<div class="education-card">
+
+<div class="education-year">
+2024 — 2028
+</div>
+
+<div>
+
+<h3>
+BVRIT Hyderabad College of Engineering for Women
+</h3>
+
+<p>
+B.Tech in Computer Science and Engineering
+</p>
+
+<p>
+CGPA: <strong>9.13</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="education-card">
+
+<div class="education-year">
+2022 — 2024
+</div>
+
+<div>
+
+<h3>
+Resonance Junior College
+</h3>
+
+<p>
+Higher Secondary Education
+</p>
+
+<p>
+Score: <strong>96.6%</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="education-card">
+
+<div class="education-year">
+2021 — 2022
+</div>
+
+<div>
+
+<h3>
+Sri Chaitanya High School
+</h3>
+
+<p>
+Secondary School Education
+</p>
+
+<p>
+GPA: <strong>10.0</strong>
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     RESUME
+======================================================= -->
+
+<section id="resume">
+
+<div class="eyebrow">
+09 — Resume
+</div>
+
+<h2>
+Want the <span>full picture?</span>
+</h2>
+
+
+<div class="resume-box">
+
+<div>
+
+<h3>
+My Resume
+</h3>
+
+<p class="muted">
+
+A concise overview of my education, projects,
+technical skills, achievements, research, and
+experience.
+
+</p>
+
+<div class="resume-meta">
+
+<span>Education</span>
+<span>Projects</span>
+<span>AI / ML</span>
+<span>Research</span>
+<span>Achievements</span>
+
+</div>
+
+</div>
+
+
+<a class="button"
+href="Resume.pdf"
+target="_blank">
+
+View Resume ↗
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+======================================================= -->
+
+<section id="contact">
+
+<div class="eyebrow">
+10 — Contact
+</div>
+
+<h2>
+Let's build something<br>
+<span>meaningful.</span>
+</h2>
+
+
+<div class="contact-grid">
+
+
+<div>
+
+<p class="sectiontext">
+
+I'm open to learning opportunities, internships,
+technical collaborations, research conversations,
+and interesting projects.
+
+</p>
+
+<p class="sectiontext">
+
+If you have an idea worth exploring, I'd be happy
+to connect.
+
+</p>
+
+<a class="email"
+href="mailto:aishwaryanagothu25@gmail.com">
+
+aishwaryanagothu25@gmail.com ↗
+
+</a>
+
+<a class="button"
+href="mailto:aishwaryanagothu25@gmail.com">
+
+Send me an email
+
+</a>
+
+</div>
+
+
+<div class="social-links">
+
+
+<a class="social-link"
+href="https://www.linkedin.com/in/aishwarya-nagothu-5a3222349/"
+target="_blank">
+
+<span>LinkedIn</span>
+<span>↗</span>
+
+</a>
+
+
+<a class="social-link"
+href="https://github.com/aishwarya-nagothu"
+target="_blank">
+
+<span>GitHub</span>
+<span>↗</span>
+
+</a>
+
+
+<a class="social-link"
+href="https://leetcode.com/u/aishwarya_598/"
+target="_blank">
+
+<span>LeetCode</span>
+<span>↗</span>
+
+</a>
+
+
+<a class="social-link"
+href="https://www.codechef.com/users/aishwarya_598"
+target="_blank">
+
+<span>CodeChef</span>
+<span>↗</span>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+<span>
+© 2026 Aishwarya Nagothu
+</span>
+
+<span>
+BVRIT Hyderabad · Computer Science & Engineering
+</span>
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>
+```
